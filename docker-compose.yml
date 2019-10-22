@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  test:
+    image: golang:1.13
+    volumes: 
+      - ./migrations:/app/migrations
+    working_dir: /app/migrations
+    command: ["sh", "-c", "./test.sh"]
+    # command: ["./test.sh"]
